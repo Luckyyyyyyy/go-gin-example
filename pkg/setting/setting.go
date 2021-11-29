@@ -24,7 +24,10 @@ func init() {
 	if err != nil {
 		log.Fatalf("Fail to parse 'conf/app.ini':%v", err)
 	}
-
+	//执行 配置初始化
+	LoadBase()
+	LoadServer()
+	LoadApp()
 }
 
 func LoadBase() {
